@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/office/16/null/hearts.png">
+    <title>Akira</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+    * {
+        font-family: 'Open Sans', sans-serif;
+        font-style: italic;
+    }
+    html, body{
+        margin: 0px;
+        padding: 0px;
+    }
+    .main {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(bg.gif);
+        background-position: center;
+    }
+    #txt {
+        font-size: 35px;
+        text-align: center;
+        font-style: normal;
+    }
+    .message {
+        width: 40vw;
+        text-align: center;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    #greet {
+        font-size: 13px;
+        font-style: normal;
+    }
+  .main {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 4s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+</style>
+<body onload="startTime()">
+    <div class="main">
+        <div class="warp">
+            <div id="txt"></div>
+            <br>
+            <div class="message">
+                <div id="greet"></div>
+                <div id="content"></div>
+            </div>
+            
+        </div>
+    </div>
+        
+ 
+
+
+<script>
+function startTime() {
+  var greetings = "";
+  var morningMessage = "I hope your day is okay even if it wasn't good when you wake up. Always remember that I'm always here to support you. I'm proud of you. Iloveyoualways!!!.";
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+  if (h => 0 && h < 12) {
+    greetings = "Goodmorning Lolove, <3";
+    morningMessage = "When you open this website, panigurado tulog pa ako or nasa school na. Sana maayos gising mo, mag ingat ka po sa pagpasok hehehe. Kung badtrip ka man sa Earth sana kumalma kana, alam ko kaya mo. I know you are very stressed with your school works but don't forget boost your confidence, Kayang kaya mo yan. Iloveyou aking tahanan. Sorry sa mga nagawa ko";
+  } if (h > 11 && h < 17) {
+    greetings = "Goodafternoon, <3";
+    morningMessage = "Mahal kita palagi mag lunch kana, drink water ingaaat. Imissyouuu.";
+  } if ( h > 17 && h < 21) {
+    greetings = "Goodevening, <3";
+    morningMessage = "Hello lolovee, kain ka po marami ha para hindi magkasakit tas water mwuaaaah. Kung may masamang nangyari man kanina o ngayon (kung ako man yun sorry mahal, makulit ako), sana maging okay ka na po. Sana palagi kang happy mahaaal. Thank you sa dahil dumating ka sa buhay ko, best wish Iloveyou lovee sorry :<."
+  } if (h > 21 && h <=23) {
+    greetings = "Goodnight mahaal, <3";
+    morningMessage = "Kung mabasa mo at may ginagawa ka kaya gising ka pa, kaya mo yan mahaaal goodluck sa mga homework mo. Kung hindi ka man makatulog dahil may iniisip ka, sana makalimutan mo na. Pilitin mo parin po sanang matulog, para hindi ka magkasakit. Imissyouuu Iloveyou gusto na kitang yakapin, sorry <3.";
+  }
+  if (h > 17 && h < 21) {
+    document.getElementById('greet').innerHTML = greetings;
+    document.getElementById('content').innerHTML = morningMessage;
+  } if (h => 0 && h < 12) {
+    document.getElementById('greet').innerHTML = greetings;
+    document.getElementById('content').innerHTML = morningMessage;
+  }if ( h > 11 && h < 17) {
+    document.getElementById('greet').innerHTML = greetings;
+    document.getElementById('content').innerHTML = morningMessage;
+  } if ( h > 21 && h <=23) {
+    document.getElementById('greet').innerHTML = greetings;
+    document.getElementById('content').innerHTML = morningMessage;
+  } 
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+
+</script>
+
+</body>
+</html>
