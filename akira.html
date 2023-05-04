@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="https://img.icons8.com/office/16/null/hearts.png">
-    <title>Akira</title>
+    <title>Adi</title>
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap');
@@ -23,7 +23,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: url(bg.gif);
+        background-image: url(./pic/bg.gif);
         background-position: center;
     }
     #txt {
@@ -44,20 +44,20 @@
         font-style: normal;
     }
   .main {
-	opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 4s;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 4s;
 }
 
 @keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>
 <body onload="startTime()">
@@ -79,7 +79,7 @@
 <script>
 function startTime() {
   var greetings = "";
-  var morningMessage = "I hope your day is okay even if it wasn't good when you wake up. Always remember that I'm always here to support you. I'm proud of you. Iloveyoualways!!!.";
+  var morningMessage = "I hope your day is okay even if it wasn't good when you woke up this morning and always remember that I am always here by your side no matter what. I love you aking tinatangi.";
   const today = new Date();
   let h = today.getHours();
   let m = today.getMinutes();
@@ -89,31 +89,25 @@ function startTime() {
   document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
   setTimeout(startTime, 1000);
   if (h => 0 && h < 12) {
-    greetings = "Goodmorning Lolove, <3";
-    morningMessage = "When you open this website, panigurado tulog pa ako or nasa school na. Sana maayos gising mo, mag ingat ka po sa pagpasok hehehe. Kung badtrip ka man sa Earth sana kumalma kana, alam ko kaya mo. I know you are very stressed with your school works but don't forget boost your confidence, Kayang kaya mo yan. Iloveyou aking tahanan. Sorry sa mga nagawa ko";
-  } if (h > 11 && h < 17) {
+  greetings = "Goodmorning Lolove, <3";
+    morningMessage = "When you open this website, panigurado tulog pa ako or nasa school na. Sana maayos gising mo, mag ingat ka po sa pagpasok hehehe. Kung badtrip ka man sa Earth sana kumalma kana, alam ko kaya mo. I know you are very stressed with your school works but don't forget boost your confidence, Kayang kaya mo yan. Iloveyou aking tahanan. Sorry sa mga nagawa ko Best GF";
+  } if (h >11 && h < 17) {
     greetings = "Goodafternoon, <3";
-    morningMessage = "Mahal kita palagi mag lunch kana, drink water ingaaat. Imissyouuu.";
-  } if ( h > 17 && h < 18) {
-    greetings = "Goodevening, <3";
-    morningMessage = "Hello lolovee, kain ka po marami ha para hindi magkasakit tas water mwuaaaah. Kung may masamang nangyari man kanina o ngayon (kung ako man yun sorry mahal, makulit ako), sana maging okay ka na po. Sana palagi kang happy mahaaal. Thank you sa dahil dumating ka sa buhay ko, best wish Iloveyou lovee sorry :<."
-  } if (h > 18 && h <=23) {
-    greetings = "Goodnight mahaal, <3";
-    morningMessage = "Kung mabasa mo at may ginagawa ka kaya gising ka pa, kaya mo yan mahaaal goodluck sa mga homework mo. Kung hindi ka man makatulog dahil may iniisip ka, sana makalimutan mo na. Pilitin mo parin po sanang matulog, para hindi ka magkasakit. Imissyouuu Iloveyou gusto na kitang yakapin, sorry <3.";
+    morningMessage = "Mahal kita palagi mag lunch kana, drink water ingaaat. Magmeryenda ka pag uwian niyo na ha, ingat rin sa pagtawid punas ka po pawis mahaal ko Iloveyou. Imissyouuu. Best Gf";
+  } if ( h > 17 && h <=23) {
+      greetings = "Goodevening, Goodnight(if ever late mo na po nabasa) <3";
+    morningMessage = "Hello lolovee, kain ka po marami ha para hindi magkasakit tas water mwuaaaah. Kung may masamang nangyari man kanina o ngayon (kung ako man yun sorry mahal, makulit ako), sana maging okay ka na po. Sana palagi kang happy mahaaal. Pilitin mo parin po sanang matulog para hindi ka magkasakit, huwag kana po masyado magpuyat ha. Sorry sa mga nagawa ko, ayokong nahihirapan ka po. Sana mawala na sa isip mo yun mahaaal. Imissyouuu Iloveyou gusto na kitang yakapin, thank you sa dahil dumating ka sa buhay ko, Iloveyou lovee sorry :<. Best Gf";
   }
-  if (h > 17 && h < 18) {
+  if (h > 17 && h <=23) {
     document.getElementById('greet').innerHTML = greetings;
     document.getElementById('content').innerHTML = morningMessage;
-  } if (h => 0 && h < 12) {
+  } if (h => 0 && h <12) {
     document.getElementById('greet').innerHTML = greetings;
     document.getElementById('content').innerHTML = morningMessage;
   }if ( h > 11 && h < 17) {
     document.getElementById('greet').innerHTML = greetings;
     document.getElementById('content').innerHTML = morningMessage;
-  } if ( h > 18 && h <=23) {
-    document.getElementById('greet').innerHTML = greetings;
-    document.getElementById('content').innerHTML = morningMessage;
-  } 
+  }
 }
 
 function checkTime(i) {
